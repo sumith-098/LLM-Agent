@@ -38,8 +38,8 @@ config = types.GenerateContentConfig(
     automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
 )
 
-# ---------- AGENT LOOP ----------
-def run_agent(question: str, max_steps: int = 5):
+# ---------- AGENT LOOP --------
+def run_agent(question: str, max_steps: int = 5):       
     print(f"\n🧑 USER: {question}\n")
     contents = [types.Content(role="user", parts=[types.Part(text=question)])]
 
